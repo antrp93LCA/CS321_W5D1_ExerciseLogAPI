@@ -1,7 +1,9 @@
-﻿using CS321_W5D1_ExerciseLogAPI.Core.Services;
+﻿using CS321_W5D1_ExerciseLogAPI.Core.Models;
+using CS321_W5D1_ExerciseLogAPI.Core.Services;
 using CS321_W5D1_ExerciseLogAPI.Infrastructure.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -23,6 +25,7 @@ namespace CS321_W5D1_ExerciseLogAPI
             services.AddDbContext<AppDbContext>();
 
             // TODO: Prep Part 1: Add Identity services (Part 1 of prep exercise)
+            services.AddIdentity<User, IdentityRole>();
 
             // TODO: Prep Part 2: Add JWT support 
 
